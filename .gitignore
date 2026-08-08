@@ -1,0 +1,21 @@
+# Python environment and cache
+.venv/
+__pycache__/
+*.py[cod]
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Generated data and output
+data/raw/*
+data/bronze/*
+data/silver/*
+data/gold/*
+data/quality/*
+!data/**/.gitkeep
+
+# Notebook checkpoints and editor settings
+.ipynb_checkpoints/
+.vscode/
