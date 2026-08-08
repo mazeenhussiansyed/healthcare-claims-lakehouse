@@ -1,0 +1,8 @@
+services:
+  pipeline:
+    build:
+      context: .
+    image: healthcare-claims-pipeline:local
+    volumes:
+      - ./data:/app/data
+    command: python -m pytest -q
