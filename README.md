@@ -143,6 +143,13 @@ The orchestration process performs these stages in order:
 5. Build Gold KPI datasets
 
 ## Gold-Layer Analytics
+### 4. Launch the interactive dashboard with Docker
+
+```bash
+docker compose up --build dashboard
+```
+
+Open `http://localhost:8501` in your browser. Press `Ctrl + C` in the terminal when you want to stop the dashboard.
 
 The Gold layer produces datasets that support healthcare operations and analytics, including:
 
