@@ -162,4 +162,8 @@ The Gold layer produces datasets that support healthcare operations and analytic
 
 **Mazeen Hussain**
 
-Data Engineering & Data Analytics Portfolio Project
+Data Engineering & Data Analytics Project
+
+## Architecture
+
+See the [current pipeline architecture](docs/architecture/current-architecture.md) for the end-to-end data flow, quality controls, and deployment components.
