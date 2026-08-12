@@ -173,7 +173,7 @@ def main() -> None:
             },
         )
         trend_chart.update_layout(legend_title_text="")
-        st.plotly_chart(trend_chart, use_container_width=True)
+        st.plotly_chart(trend_chart, width="stretch")
 
         left, right = st.columns(2)
 
@@ -189,7 +189,7 @@ def main() -> None:
                 },
                 color_discrete_sequence=["#2563eb"],
             )
-            st.plotly_chart(volume_chart, use_container_width=True)
+            st.plotly_chart(volume_chart, width="stretch")
 
         with right:
             st.subheader("Operational Snapshot")
@@ -245,7 +245,7 @@ def main() -> None:
             },
             title="Top 10 Providers by Paid Claims Amount",
         )
-        st.plotly_chart(provider_chart, use_container_width=True)
+        st.plotly_chart(provider_chart, width="stretch")
 
         st.subheader("Diagnosis Cost and Utilization")
         diagnosis_chart_data = (
@@ -268,7 +268,7 @@ def main() -> None:
             },
             title="Top Diagnoses by Paid Claims Amount",
         )
-        st.plotly_chart(diagnosis_chart, use_container_width=True)
+        st.plotly_chart(diagnosis_chart, width="stretch")
 
         st.subheader("Provider Performance Table")
         provider_table = filtered_providers[
@@ -290,7 +290,7 @@ def main() -> None:
                     "average_paid_amount": "${:,.2f}",
                 }
             ),
-            use_container_width=True,
+            width="stretch",
             hide_index=True,
         )
 
@@ -321,7 +321,7 @@ def main() -> None:
                 },
                 color_continuous_scale="Oranges",
             )
-            st.plotly_chart(state_chart, use_container_width=True)
+            st.plotly_chart(state_chart, width="stretch")
 
         with right:
             st.subheader("Patient Age Distribution")
@@ -337,7 +337,7 @@ def main() -> None:
                 barmode="overlay",
                 opacity=0.75,
             )
-            st.plotly_chart(age_chart, use_container_width=True)
+            st.plotly_chart(age_chart, width="stretch")
 
         st.subheader("Highest-Cost Patient Cohort")
         high_cost_table = (
@@ -364,7 +364,7 @@ def main() -> None:
                     "total_paid_amount": "${:,.2f}",
                 }
             ),
-            use_container_width=True,
+            width="stretch",
             hide_index=True,
         )
 
@@ -383,7 +383,7 @@ def main() -> None:
             )
             st.dataframe(
                 quality_table,
-                use_container_width=True,
+                width="stretch",
                 hide_index=True,
             )
 

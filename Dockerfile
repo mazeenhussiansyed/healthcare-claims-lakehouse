@@ -15,7 +15,10 @@ RUN chown -R appuser:appuser /app
 
 COPY --chown=appuser:appuser src ./src
 COPY --chown=appuser:appuser tests ./tests
+COPY --chown=appuser:appuser dashboard ./dashboard
 COPY --chown=appuser:appuser README.md ./
+
+EXPOSE 8501
 
 USER appuser
 

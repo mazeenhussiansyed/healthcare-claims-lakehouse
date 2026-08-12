@@ -6,3 +6,21 @@ services:
     volumes:
       - ./data:/app/data
     command: python -m pytest -q
+
+  dashboard:
+    build:
+      context: .
+    image: healthcare-claims-pipeline:local
+    volumes:
+      - ./data:/app/data
+    ports:
+      - "8501:8501"
+    command:
+      - python
+      - -m
+      - streamlit
+      - run
+      - dashboard/app.py
+      - --server.address=0.0.0.0
+      - --server.port=8501
+      - --browser.gatherUsageStats=false
