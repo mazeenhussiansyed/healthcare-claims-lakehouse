@@ -178,4 +178,5 @@ A separate Databricks Free Edition implementation recreates the Medallion pipeli
 [View the Databricks PySpark notebook](notebooks/databricks/healthcare_claims_medallion_pyspark.py).
 
 
-See the [current pipeline architecture](docs/architecture/current-architecture.md) for the end-to-end data flow, quality controls, and deployment components.
+- [Local pipeline architecture](docs/architecture/current-architecture.md) — Python, Parquet, Docker, orchestration, and Streamlit.
+- [Databricks architecture](docs/architecture/databricks-architecture.md) — Unity Catalog, PySpark, Delta Lake, quality controls, and high-cost utilization study.
