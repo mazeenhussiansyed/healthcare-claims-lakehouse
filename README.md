@@ -165,5 +165,17 @@ The Gold layer produces datasets that support healthcare operations and analytic
 Data Engineering & Data Analytics Project
 
 ## Architecture
+## Databricks PySpark and Delta Lake Implementation
+
+A separate Databricks Free Edition implementation recreates the Medallion pipeline using PySpark and Delta Lake tables in Databricks-managed storage—no AWS account or S3 bucket is required.
+
+- Loaded and validated the same 10,100-row synthetic claims batch in a Unity Catalog volume.
+- Published Bronze, Silver, quarantine, and four Gold Delta tables with PySpark.
+- Verified 9,850 Silver claims and $26,027,054.22 in synthetic paid amounts.
+- Defined high-cost utilization as the top 10% of patients by total paid amount (exact P90 threshold: $52,856.86); the 100-patient cohort represents 25.3% of total synthetic paid cost.
+- Built an exploratory cost-concentration study by diagnosis inside the high-cost cohort. Results are synthetic and do not imply clinical causation.
+
+[View the Databricks PySpark notebook](notebooks/databricks/healthcare_claims_medallion_pyspark.py).
+
 
 See the [current pipeline architecture](docs/architecture/current-architecture.md) for the end-to-end data flow, quality controls, and deployment components.
