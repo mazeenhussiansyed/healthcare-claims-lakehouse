@@ -180,3 +180,19 @@ A separate Databricks Free Edition implementation recreates the Medallion pipeli
 
 - [Local pipeline architecture](docs/architecture/current-architecture.md) — Python, Parquet, Docker, orchestration, and Streamlit.
 - [Databricks architecture](docs/architecture/databricks-architecture.md) — Unity Catalog, PySpark, Delta Lake, quality controls, and high-cost utilization study.
+
+## Power BI Dashboard
+
+A Power BI Desktop report built from the Gold-layer KPI exports.
+
+### Report pages
+
+- **Executive Overview** — total paid claims, total claims, unique patients, paid-to-billed ratio, and monthly paid-claims trend.
+- **Cost Drivers** — paid claims by diagnosis and the top 10 providers by paid claims.
+
+### Refresh the Power BI source data
+
+Run the export script after generating a Gold batch:
+
+```bash
+python src/exports/export_gold_to_csv.py
